@@ -1,7 +1,9 @@
+name: Workflow for Schemathesis
+on: [push, pull_request]
 jobs:
-api-tests:
-  runs-on: ubuntu-22.04
-  steps:
+  run:
+    runs-on: ubuntu-latest
+steps:
     - uses: schemathesis/action@v1
       with:
         schema: "https://example.schemathesis.io/openapi.json"
