@@ -9,7 +9,7 @@ jobs:
     - name: Default test
       uses: schemathesis/action@v1
       with:
-        schema: test.json
+        schema: ${{ github.workspace }}/test.json
         token: ${{ secrets.SCHEMATHESIS_TOKEN }}
       # - name: Default test
       #   uses: schemathesis/action@v1
