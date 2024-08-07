@@ -5,8 +5,14 @@ jobs:
     runs-on: ubuntu-22.04
     name: Test
     steps:
-      - name: Default test
-        uses: schemathesis/action@v1
-        with:
-          schema: test.json
-          token: ${{ secrets.SCHEMATHESIS_TOKEN }}
+    # Run tests in schema test.json
+    - name: Default test
+      uses: schemathesis/action@v1
+      with:
+        schema: test.json
+        token: ${{ secrets.SCHEMATHESIS_TOKEN }}
+      # - name: Default test
+      #   uses: schemathesis/action@v1
+      #   with:
+      #     schema: test.json
+      #     token: ${{ secrets.SCHEMATHESIS_TOKEN }}
