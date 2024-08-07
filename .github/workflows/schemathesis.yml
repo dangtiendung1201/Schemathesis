@@ -3,8 +3,11 @@ on: [push, pull_request]
 jobs:
   run:
     runs-on: ubuntu-latest
-steps:
-    - uses: schemathesis/action@v1
+  steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: Run Schemathesis
+      uses: schemathesis/action@v1
       with:
         schema: "https://example.schemathesis.io/openapi.json"
         # OPTIONAL. Add Schemathesis.io token for pull request reports
