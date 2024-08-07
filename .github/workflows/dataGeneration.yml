@@ -5,14 +5,8 @@ jobs:
     runs-on: ubuntu-22.04
     name: Test
     steps:
-    # Run tests in schema test.json
-    - name: Default test
-      uses: schemathesis/action@v1
-      with:
-        schema: ${{ github.workspace }}/test.json
-        token: ${{ secrets.SCHEMATHESIS_TOKEN }}
-      # - name: Default test
-      #   uses: schemathesis/action@v1
-      #   with:
-      #     schema: test.json
-      #     token: ${{ secrets.SCHEMATHESIS_TOKEN }}
+      - name: Default test
+        uses: schemathesis/action@v1
+        with:
+          schema: 'https://raw.githubusercontent.com/dangtiendung1201/Schemathesis/main/test.json/?token=${{ secrets.TOKEN }}'
+          token: ${{ secrets.SCHEMATHESIS_TOKEN }}
