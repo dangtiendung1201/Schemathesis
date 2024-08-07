@@ -4,8 +4,7 @@ jobs:
   run:
     runs-on: ubuntu-latest
   steps:
-    - name: Run Schemathesis
-      uses: schemathesis/action@v1
+    - uses: schemathesis/action@v1
       with:
         schema: "https://example.schemathesis.io/openapi.json"
         # OPTIONAL. Add Schemathesis.io token for pull request reports
