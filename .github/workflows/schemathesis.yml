@@ -6,7 +6,7 @@ jobs:
     name: Test
     steps:
       - name: Default test
-        uses: ./
+        uses: schemathesis/action@v1
         with:
           schema: 'https://example.schemathesis.io/openapi.json'
           token: ${{ secrets.SCHEMATHESIS_TOKEN }}
