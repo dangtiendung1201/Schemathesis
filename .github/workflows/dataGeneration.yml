@@ -8,5 +8,5 @@ jobs:
       - name: Default test
         uses: schemathesis/action@v1
         with:
-          schema: 'https://raw.githubusercontent.com/dangtiendung1201/Schemathesis/main/test.json/?token=${{ secrets.TOKEN }}'
+          schema: 'https://raw.githubusercontent.com/dangtiendung1201/Schemathesis/main/test.json'
           token: ${{ secrets.SCHEMATHESIS_TOKEN }}
