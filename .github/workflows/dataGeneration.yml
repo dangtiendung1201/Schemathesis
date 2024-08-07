@@ -8,5 +8,5 @@ jobs:
       - name: Default test
         uses: schemathesis/action@v1
         with:
-          schema: 'test.json'
+          schema: '../test.json'
           token: ${{ secrets.SCHEMATHESIS_TOKEN }}
