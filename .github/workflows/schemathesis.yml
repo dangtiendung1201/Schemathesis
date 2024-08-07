@@ -1,0 +1,11 @@
+jobs:
+api-tests:
+  runs-on: ubuntu-20.04
+  steps:
+    # Runs Schemathesis tests
+    - uses: schemathesis/action@v1
+      with:
+        # Your API schema location
+        schema: 'http://localhost:5000/api/openapi.json'
+        # Set your token from secrets
+        token: ${{ secrets.SCHEMATHESIS_TOKEN }}
